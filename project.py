@@ -7,14 +7,21 @@ def open_file(file_name):
 
 
 def calculate_lines(lines: list) -> int:
-    return len(lines)
+    number_lines = len(lines)
+    return number_lines
 
 
 def calculate_words(data: str) -> int:
-    for i in data:
-        print(i)
+    number_words = 0
+    words = data.split()
+    for i in range(len(words)):
+        number_words += 1
+    return number_words
+
+f = input('Введите путь до файла: ')
+text, list_of_strings = open_file(f)
+print(text)
+print("Количество строк:", calculate_lines(list_of_strings))
+print("Количество слов:", calculate_words(text))
 
 
-open_file('text.txt')
-calculate_words(data)
-# разобраться как работает возврат внутри функции и как использовать данные в других
