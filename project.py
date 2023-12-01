@@ -10,7 +10,7 @@ def open_file(file_name, encoding='utf-8'):
 def calculate_lines(data: str) -> int:
     number_lines = 0
     for i in data:
-        if i == '\n':
+        if i == '\n' and i != '\n\n':
             number_lines += 1
     return number_lines
 
