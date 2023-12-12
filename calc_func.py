@@ -42,6 +42,24 @@ def calculate_symbols(data: str) -> int:
     return count_symbols
 
 
+def is_link(data: str) -> bool:
+    i = 0
+    if i == len(data) or data[i] != '[':
+        return False
+    i += 1
+    while i < len(data) and is_symbol(data[i]):
+        i += 1
+    if i == len(data) or data[i] != ']':
+        return False
+    i += 1
+    return True
+
+# def calculate_link(data: str) -> int:
+#     i = 0
+#     if data[i] != '[':
+#         return
+
+
 # def calculate_emails(data: str) -> int:
 #     count = 0
 #     has_symbol = True
