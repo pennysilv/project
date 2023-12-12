@@ -1,4 +1,4 @@
-from calc_func import calculate_lines, calculate_words
+from calc_func import calculate_lines, calculate_words, calculate_symbols
 
 
 def read_whole_file(file_name, encoding='utf-8'):
@@ -12,5 +12,6 @@ text = read_whole_file(f)
 print(text)
 print("Количество строк:", calculate_lines(text))
 print("Количество слов:", calculate_words(text))
+print("Количество символов:", calculate_symbols(text))
 
 
